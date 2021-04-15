@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 
 namespace LanchesMaC.Context
 {
-    public class AddDbContext : DbContext
+    public class AppDbContext : DbContext
     {
-        public AddDbContext(DbContextOptions<AddDbContext> options) : base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
 
         }
@@ -17,6 +17,8 @@ namespace LanchesMaC.Context
         public DbSet<Lanche> Lanches { get; set; }
 
         public DbSet<Categoria> Categorias { get; set; }
+
+        public DbSet<CarrinhoCompraItem> CarrinhoCompraItens { get; set; }
 
     }
 }
